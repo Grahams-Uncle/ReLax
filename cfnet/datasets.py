@@ -120,7 +120,7 @@ def find_imutable_idx_list(
 
 # %% ../nbs/01_datasets.ipynb 6
 class DataModuleConfigs(BaseParser):
-    batch_size: int
+    batch_size: Optional[int] = None # batch_size is deprecated in `DataModuleConfigs
     discret_cols: List[str] = []
     continous_cols: List[str] = []
     imutable_cols: List[str] = []
